@@ -6,7 +6,7 @@ require 'fileutils'
 # Start loop.
 until 1 == 2 do
 	
-# Grab the weather for Goteborg, Sweden.
+	# Grab the weather for Goteborg, Sweden.
 	weather_url = 'http://api.wunderground.com/api/a7f118ad23b2d3b9/conditions/q/SE/goteborg.json'
 	response = Net::HTTP.get_response(URI.parse(weather_url))
 	response_hash = JSON.parse(response.body)
