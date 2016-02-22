@@ -1,7 +1,25 @@
+background no
+
+use_xft yes
+xftfont <?>
+xftalpha 1
+
+update_interval 4.0
+double_buffer yes
+
+own_window yes
+own_window_transparent yes
+own_window_hints undecorated,above,sticky,skip_taskbar,skip_pager
+
+draw_shades no
+draw_borders no
+
+alignment top_right
+
 TEXT
 ${image /home/username/personky/res/background.png -p 0,0 -s 392x200}	## prints main image
 ${image /home/username/personky/res/timeOfDay.png} ## prints time of day icon (eg Afternoon or Night)
-${goto <?>}${time %R}	## prints time (eg 04:02)
+${goto <?>}${time %l%M}	## prints time (eg 4:02 or 16:25)
 ${goto <?>}${time %-d:%-m} ## prints date (eg 7/2)
 ${goto <?>}${time %a}	## prints abbreviated weekday name
 ## todo: print weather icon
