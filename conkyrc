@@ -1,0 +1,8 @@
+TEXT
+${image /home/username/personky/res/background.png -p 0,0 -s 392x200}	## prints main image
+${image /home/username/personky/res/timeOfDay.png} ## prints time of day icon (eg Afternoon or Night)
+${goto <?>}${time %R}	## prints time (eg 04:02)
+${goto <?>}${time %-d:%-m} ## prints date (eg 7/2)
+${goto <?>}${time %a}	## prints abbreviated weekday name
+## todo: print weather icon
+## todo: run weather.rb
